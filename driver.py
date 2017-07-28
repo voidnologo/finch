@@ -28,8 +28,10 @@ def get_input():
         return char
 
 
-def show_data(action):
-    print(f'{action:10}{speed.left:>8.2}{speed.right:>8.2}')
+def show_data(action, left=None, right=None):
+    left = left if left else speed.left
+    right = right if right else speed.right
+    print(f'{action:10}{left:>8.2}{right:>8.2}')
 
 
 def faster():
@@ -70,7 +72,7 @@ def delay():
 
 
 def left():
-    show_data('left')
+    show_data('left', left=-1*speed.left)
     # rbot.led(*red)
     # rbot.wheels(-1 * speed.left, speed.right)
     delay()
@@ -78,7 +80,7 @@ def left():
 
 
 def right():
-    show_data('right')
+    show_data('right', right=-1*speed.right)
     # rbot.led(*blue)
     # rbot.wheels(speed.left, -1 * speed.right)
     delay()
