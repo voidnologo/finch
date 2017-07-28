@@ -1,17 +1,7 @@
-# import sys
 import time
-# from read_char import ReadChar
 from finch import Finch
 
 rbot = Finch()
-
-
-# def get_input():
-#     with ReadChar() as rc:
-#         char = rc.upper()
-#         if char in ['\x03']:
-#             sys.exit()
-#         return char
 
 
 def stop():
@@ -76,6 +66,7 @@ def bck():
     stop()
 
 
+# Trace design on floor
 forward(4)
 right(.3)
 forward(5)
@@ -98,24 +89,3 @@ forward(9)
 left_90()
 forward(8)
 right(3)
-
-# while True:
-#     i = input('>>>')
-
-#     if i == 'j':
-#         left()
-
-#     if i == 'l':
-#         right()
-
-#     if i == 'i':
-#         forward()
-
-#     if i == 'k':
-#         back()
-
-#     if i == 'q':
-#         break
-
-#     time.sleep(.01)
-#     i = ''
